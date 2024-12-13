@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.feature.home.GreetingFromFeature
+import com.example.feature.presentation.home.GreetingFromFeature
 import com.example.pricetagdemo.ui.theme.PriceTagDemoTheme
 
 class MainActivity : ComponentActivity() {
