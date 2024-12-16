@@ -1,5 +1,3 @@
-package com.example.convention
-
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -16,7 +14,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 apply("com.android.application")
                 apply("dagger.hilt.android.plugin")
                 apply("org.jetbrains.kotlin.android")
-                apply("org.jetbrains.kotlin.kapt")
             }
 
             extensions.configure<BaseAppModuleExtension> {
@@ -26,9 +23,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 add("implementation", libs.findLibrary("hilt.android").get())
-                add("kapt", libs.findLibrary("hilt.compiler").get())
                 add("androidTestImplementation", libs.findLibrary("hilt.android.testing").get())
-                add("kaptAndroidTest", libs.findLibrary("hilt.android.compiler").get())
             }
 
             val kaptExtension = extensions.getByType<KaptExtension>()

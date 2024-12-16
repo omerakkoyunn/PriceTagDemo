@@ -1,5 +1,3 @@
-package com.example.convention
-
 object ProjectConfig {
     const val appId = "com.plcoding.multimodulegradlemanagement"
     const val minSdk = 24
