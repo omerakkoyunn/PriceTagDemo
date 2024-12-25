@@ -1,4 +1,4 @@
-package com.example.core.util
+package com.example.util
 
 
 sealed class Response<out T> {

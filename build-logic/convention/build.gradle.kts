@@ -29,8 +29,18 @@ kotlin {
 gradlePlugin {
     plugins {
         register("androidApp") {
-            id = "main.gradle.application"
-            implementationClass = "MainGradlePlugin"
+            id = "plugin.application"
+            implementationClass = "plugins.AndroidApplicationConventionPlugin"
+        }
+
+        register("libraryApp") {
+            id = "plugin.library"
+            implementationClass = "plugins.AndroidLibraryConventionPlugin"
+        }
+
+        register("androidHilt") {
+            id = "plugin.hilt"
+            implementationClass = "plugins.AndroidHiltConventionPlugin"
         }
     }
 }

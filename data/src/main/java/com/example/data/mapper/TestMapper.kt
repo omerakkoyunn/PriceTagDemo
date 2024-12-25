@@ -1,6 +1,6 @@
 package com.example.data.mapper
 
-import com.example.core.domain.model.device.DeviceModel
+import com.example.model.device.DeviceModel
 import com.example.data.remote.dto.DeviceDto
 
 

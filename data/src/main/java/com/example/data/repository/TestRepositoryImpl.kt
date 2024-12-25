@@ -1,8 +1,8 @@
 package com.example.data.repository
 
-import com.example.core.domain.model.device.DeviceModel
-import com.example.core.domain.repository.TestRepository
-import com.example.core.util.Response
+import com.example.model.device.DeviceModel
+import com.example.repository.TestRepository
+import com.example.util.Response
 import com.example.data.mapper.toCityData
 import com.example.data.remote.TestApi
 import kotlinx.coroutines.Dispatchers
