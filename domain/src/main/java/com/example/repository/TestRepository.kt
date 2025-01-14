@@ -1,7 +1,7 @@
-package com.example.core.domain.repository
+package com.example.repository
 
-import com.example.core.domain.model.device.DeviceModel
-import com.example.core.util.Response
+import com.example.model.device.DeviceModel
+import com.example.util.Response
 import kotlinx.coroutines.flow.Flow
 
 

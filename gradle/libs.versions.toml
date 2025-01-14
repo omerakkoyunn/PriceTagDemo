@@ -7,13 +7,18 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
 appcompat = "1.7.0"
 material = "1.12.0"
+buildGradlePlugin = "8.2.0"
+runtime = "1.7.6"
+targetSdk = "35"
+compileSdk = "35"
+androidxComposeCompiler = "1.5.7"
+minSdk = "26"
 
 ksp = "2.0.0-1.0.22"
 hiltAndroidCompiler = "2.49"
-hiltAndroid = "2.49"
+hilt = "2.50"
 hiltAndroidGradlePlugin = "2.49"
 hiltNavigationCompose = "1.2.0"
 lottieCompose = "6.3.0"
@@ -24,16 +29,17 @@ retrofit = "2.11.0"
 gson = "2.10.1"
 retrofit-converter = "2.11.0"
 okhttp-logging-interceptor= "4.12.0"
-
+jetbrainsKotlinJvm = "2.0.0"
+compose-bom = "2023.10.01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtime" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -52,9 +58,16 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 retrofit-converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit-converter" }
 okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp-logging-interceptor" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "buildGradlePlugin" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "runtime" }
 
 
 
@@ -65,6 +78,12 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+
+#convention plugins for this project
+plugin-application = { id = "plugin.application", version = "unspecified" }
+plugin-library = { id = "plugin.library", version = "unspecified" }
+plugin-hilt = { id = "plugin.hilt", version = "unspecified" }
 

@@ -1,6 +1,6 @@
-package com.example.core.domain.usecase
+package com.example.usecase
 
-import com.example.core.domain.repository.TestRepository
+import com.example.repository.TestRepository
 import javax.inject.Inject
 
 class TestUseCase @Inject constructor(
