@@ -7,13 +7,33 @@ fun Project.configureBuildTypes(
     commonExtension: CommonExtension<*, *, *, *, *>
 ) {
     commonExtension.apply {
+
+        buildFeatures {
+            buildConfig = true
+        }
+
         buildTypes {
-            getByName("release") {
+            getByName("debug") {
                 isMinifyEnabled = false
-                proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
-                )
+            }
+            getByName("release") {
+                isMinifyEnabled = true
+                proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            }
+        }
+
+        flavorDimensions += "services"
+
+        productFlavors {
+            create("gms") {
+                dimension = "services"
+                buildConfigField("String", "SERVICE_USED", "\"gms\"")
+                buildConfigField("String", "BASE_URL", "\"https://test.com\"")
+            }
+            create("hms") {
+                dimension = "services"
+                buildConfigField("String", "SERVICE_USED", "\"hms\"")
+                buildConfigField("String", "BASE_URL", "\"https://test.com\"")
             }
         }
     }
