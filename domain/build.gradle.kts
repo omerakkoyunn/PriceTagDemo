@@ -1,12 +1,14 @@
 plugins {
     alias(libs.plugins.plugin.library)
-    alias(libs.plugins.plugin.hilt)
+    alias(libs.plugins.plugin.kotlin.android)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 
 }
 
 android {
-    namespace = "com.example.domain"
+    namespace = "com.example.pricetagdemo.domain"
 }
 
 dependencies {
@@ -23,4 +25,7 @@ dependencies {
     implementation(libs.okhttp.logging.interceptor)
     implementation (libs.gson)
     implementation(libs.androidx.compose.runtime)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 }

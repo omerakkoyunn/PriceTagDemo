@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.plugin.application)
-    alias(libs.plugins.plugin.hilt)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -8,12 +11,6 @@ android {
         applicationId = "com.example.pricetagdemo"
         versionCode = 1
         versionName = "1.0.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-    }
-    packagingOptions {
-        resources.excludes.add("META-INF/*")
     }
     namespace = "com.example.pricetagdemo"
 }
@@ -36,6 +33,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
 }
 
