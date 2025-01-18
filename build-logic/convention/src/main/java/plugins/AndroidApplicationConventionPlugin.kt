@@ -29,6 +29,36 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 }
                 configureAndroidCompose(this)
                 configureBuildTypes(this)
+
+                buildFeatures {
+                    buildConfig = true
+                }
+
+                buildTypes {
+                    getByName("debug") {
+                        isMinifyEnabled = false
+                    }
+                    getByName("release") {
+                        isMinifyEnabled = true
+                        proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                    }
+                }
+
+                flavorDimensions += "services"
+
+                productFlavors {
+                    create("gms") {
+                        dimension = "services"
+                        buildConfigField("String", "SERVICE_USED", "\"gms\"")
+                        buildConfigField("String", "BASE_URL", "\"https://test.com\"")
+                    }
+                    create("hms") {
+                        dimension = "services"
+                        buildConfigField("String", "SERVICE_USED", "\"hms\"")
+                        buildConfigField("String", "BASE_URL", "\"https://test.com\"")
+                    }
+                }
+
             }
             tasks.withType<KotlinCompile>().configureEach {
                 kotlinOptions {
