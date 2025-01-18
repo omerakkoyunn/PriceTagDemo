@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.plugin.library)
-    alias(libs.plugins.plugin.kotlin.android)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.p.library)
+    alias(libs.plugins.p.kotlin.android)
+    alias(libs.plugins.p.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 
@@ -25,7 +25,6 @@ dependencies {
     implementation(libs.okhttp.logging.interceptor)
     implementation (libs.gson)
     implementation(libs.androidx.compose.runtime)
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
+
+
 }

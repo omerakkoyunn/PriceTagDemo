@@ -24,21 +24,21 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApp") {
-            id = "plugin.application"
+            id = "p.application"
             implementationClass = "plugins.AndroidApplicationConventionPlugin"
         }
 
         register("libraryApp") {
-            id = "plugin.library"
+            id = "p.library"
             implementationClass = "plugins.AndroidLibraryConventionPlugin"
         }
 
         register("androidHilt") {
-            id = "plugin.hilt"
+            id = "p.hilt"
             implementationClass = "plugins.AndroidHiltConventionPlugin"
         }
         register("androidKotlin"){
-            id = "plugin.android"
+            id = "p.android"
             implementationClass = "plugins.AndroidKotlinConventionPlugin"
         }
     }

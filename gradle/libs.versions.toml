@@ -87,8 +87,8 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 
 #convention plugins for this project
-plugin-application = { id = "plugin.application", version = "unspecified" }
-plugin-hilt = { id = "plugin.hilt", version = "unspecified" }
-plugin-kotlin-android = { id = "plugin.android",version = "unspecified"}
-plugin-library = { id = "plugin.library", version = "unspecified" }
+p-application = { id = "p.application", version = "unspecified" }
+p-hilt = { id = "p.hilt", version = "unspecified" }
+p-kotlin-android = { id = "p.android",version = "unspecified"}
+p-library = { id = "p.library", version = "unspecified" }
 

@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.plugin.kotlin.android)
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.p.library)
+    alias(libs.plugins.p.kotlin.android)
+    alias(libs.plugins.p.hilt)
 }
 
 android {
@@ -32,7 +32,5 @@ dependencies {
     implementation (libs.retrofit.converter)
     implementation(libs.okhttp.logging.interceptor)
     implementation (libs.gson)
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
+
 }
