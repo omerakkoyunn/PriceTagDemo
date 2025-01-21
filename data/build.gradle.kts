@@ -2,13 +2,15 @@ plugins {
     alias(libs.plugins.p.library)
     alias(libs.plugins.p.kotlin.android)
     alias(libs.plugins.p.hilt)
+    alias(libs.plugins.compose.compiler)
+
 }
 
 android {
     packagingOptions {
         resources.excludes.add("META-INF/*")
     }
-    namespace = "com.example.pricetagdemo.data"
+    namespace = "com.example.pricetagandroid.data"
 }
 
 dependencies {

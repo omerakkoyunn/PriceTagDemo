@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pricetagdemo.domain"
+    namespace = "com.example.pricetagandroid.domain"
 }
 
 dependencies {

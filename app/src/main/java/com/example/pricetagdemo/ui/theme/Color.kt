@@ -1,4 +1,4 @@
-package com.example.pricetagdemo.ui.theme
+package com.example.pricetagandroid.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

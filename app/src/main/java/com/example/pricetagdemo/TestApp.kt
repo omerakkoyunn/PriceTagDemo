@@ -1,4 +1,4 @@
-package com.example.pricetagdemo
+package com.example.pricetagandroid
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

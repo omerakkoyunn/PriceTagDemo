@@ -8,11 +8,11 @@ plugins {
 
 android {
     defaultConfig {
-        applicationId = "com.example.pricetagdemo"
+        applicationId = "com.example.pricetagandroid"
         versionCode = 1
         versionName = "1.0.0"
     }
-    namespace = "com.example.pricetagdemo"
+    namespace = "com.example.pricetagandroid"
 }
 
 dependencies {

@@ -1,4 +1,4 @@
-package com.example.pricetagdemo.ui.theme
+package com.example.pricetagandroid.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -34,7 +34,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun PriceTagDemoTheme(
+fun PriceTagAndroidTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

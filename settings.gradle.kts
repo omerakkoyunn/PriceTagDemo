@@ -1,6 +1,7 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        google()
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -20,7 +21,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PriceTagDemo"
+rootProject.name = "PriceTagAndroid"
 include(":app")
 include(":data")
 include(":domain")

@@ -1,4 +1,4 @@
-package com.example.pricetagdemo
+package com.example.pricetagandroid
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,14 +12,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.feature.presentation.home.GreetingFromFeature
-import com.example.pricetagdemo.ui.theme.PriceTagDemoTheme
+import com.example.pricetagandroid.ui.theme.PriceTagAndroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            PriceTagDemoTheme {
+            PriceTagAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     GreetingFromFeature(
                         name = "Android",
@@ -42,7 +42,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    PriceTagDemoTheme {
+    PriceTagAndroidTheme {
         Greeting("Android")
     }
 }

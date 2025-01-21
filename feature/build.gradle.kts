@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pricetagdemo.feature"
+    namespace = "com.example.pricetagandroid.feature"
     compileSdk = 35
 }
 

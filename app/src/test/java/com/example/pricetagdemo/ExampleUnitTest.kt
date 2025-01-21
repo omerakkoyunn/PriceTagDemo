@@ -1,4 +1,4 @@
-package com.example.pricetagdemo
+package com.example.pricetagandroid
 
 import org.junit.Test
 
